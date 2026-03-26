@@ -52,3 +52,46 @@ async function buscarCep(){
     }
 
 }
+
+function preencherCampos(dados){
+    if(dados.aguardando) {
+        document.getElementsByName("endereco").value = "Buscando Cep...";
+        document.getElementsByName("cidade").value = "Buscando Cep...";
+        document.getElementsByName("bairro").value = "Buscando Cep...";
+        document.getElementsByName("estado").value = "Buscando Cep...";
+        
+        return;
+    }
+    
+    document.getElementById("endereco").value = dados.logradouro || "";
+    document.getElementById("cidade").value = dados.localidade || "";
+    document.getElementById("bairro").value = dados.bairro || "";
+    document.getElementById("estado").value = dados.uf || "";
+    
+    if(dados.complemento) {
+         document.getElementById("complemento").value = dados.complemento;
+    }
+}
+
+function limparCampoEndereco() {
+    document.getElementById("endereco").value = "";
+    document.getElementById("numero").value = "";
+    document.getElementById("bairro").value = "";
+    document.getElementById("cidade").value = "";
+    document.getElementById("estado").value = "";
+    document.getElementById("complemento").value = "";
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+    const campoCep = document.getElementById("cep");
+    
+    campoCep.addEventListener("input", function(){
+        let valor = this.value.replace(/\D/g, "");
+        
+        if(valor.length > 5){
+            valo = valor.substring(0, 5) + "-" +valor.substring(5, 8);
+        }
+        this.volue = valor;
+    });
+
+});
