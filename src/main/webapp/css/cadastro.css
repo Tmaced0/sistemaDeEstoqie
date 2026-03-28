@@ -1,9 +1,6 @@
 body {
     background-color: var(--gray-light);
-    color: var(--gray-dark);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    color: var(--gray-dark);   
 }
 
 #header {

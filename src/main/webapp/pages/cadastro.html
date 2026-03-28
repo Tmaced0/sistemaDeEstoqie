@@ -28,7 +28,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             </nav>
         </header>
         <main>
-            <form action="/Cadastro" method="POST">
+            <form action="../Cadastro" method="POST">
                 <div class="container">
                     <div class="dadosPessoais">
                         <label for="nameFist">Nome</label>
@@ -43,7 +43,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         <select name="sexo">
                             <option value="">Selecione o sexo</option>
                             <option value="">Masculino</option>
-                            <option value="">Femenino</option>
+                            <option value="">Feminino</option>
                         </select>
                         <label for="dtaNascimento">Data de nascimento</label>
                         <input type="date" name="dtaNascimento" id="dtaNascimento"/>
@@ -51,6 +51,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         <input type="email" name="email" id="email" placeholder="xxxxxxxxxxxx@xxxx.xxx"/>
                         <label for="telefone">Telefone</label>
                         <input type="tel" name="telefone" id="telefone" placeholder="(00)0000-0000"/>
+                        <label for="usuario">Usuário</label>
+                        <input type="text" name="usuario" id="usuario" placeholder="(Digite seu usuário"/>
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha"/>
                         <label for="funcao">Função</label>
                         <input type="text" name="funcao" id="funcao" placeholder="Digite a sua função"/>
                         
